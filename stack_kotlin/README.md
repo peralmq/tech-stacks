@@ -4,9 +4,15 @@ Stack based on
 * [Ktor](http://ktor.io/) - a micro web framework
 * [Gradle](https://gradle.org/) - a package, dependency management, and build tool
 
+## Pre-requisite
+```
+brew cask install java
+brew install gradle
+gradlew wrapper
+```
+
 ## Local development
 ```
-./gradlew wrapper
 ./gradlew clean run
 ```
 
@@ -15,5 +21,3 @@ In order to get new source code in to the docker container the following is a ne
 ```
 ./gradlew clean build
 ```
-
-

@@ -5,11 +5,25 @@ Comparison between different tech stacks. Each with a unique set of programming 
 * small, but pluggable, web framework
 * no ORM but still safe database access
 
+## Pre-requisite
+Install [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and [Gradle](https://gradle.org/)
+```
+brew cask install java
+brew install gradle
+```
+
 ## Usage
+Note! Right now you need to manually build the Kotlin stack (will be part of Docker later).
+```
+cd stack_kotlin
+gradle wrapper
+./gradlew build
+```
+
 Make sure [Docker](https://www.docker.com/) and [docker-compose](https://docs.docker.com/compose/) is available, then run:
 ```
 docker-compose build
-docker-compose run
+docker-compose up
 ```
 
 The different tech stacks will are now up and running. You can access them each via specific port numbers, i.e:
