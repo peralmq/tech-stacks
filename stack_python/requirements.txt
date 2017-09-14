@@ -1,2 +1,4 @@
 Flask==0.12.2
 mypy==0.521
+mysqlclient==1.3.12
+SQLAlchemy==1.1.14

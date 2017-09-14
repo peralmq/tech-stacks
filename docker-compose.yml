@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   stack_kotlin:
     build: stack_kotlin
@@ -12,3 +12,14 @@ services:
     build: stack_typescript
     ports:
      - "9003:3001"
+  db_mysql:
+    image: mysql:5.7
+    container_name: db_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_USER: ts_user
+      MYSQL_PASSWORD: ts_pw
+      MYSQL_DATABASE: ts_db
+    ports:
+      - "3333:3306"
+    restart: always
