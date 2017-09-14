@@ -10,12 +10,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/knex": "^0.0.61",
     "@types/node": "^8.0.28",
     "typescript": "^2.5.2"
   },
   "dependencies": {
     "express": "^4.15.4",
+    "knex": "^0.13.0",
     "morgan": "^1.8.2",
+    "mysql": "^2.14.1",
     "nodemon": "^1.12.0"
   }
 }

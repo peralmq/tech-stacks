@@ -3,7 +3,16 @@ Stack based on
 * [Node.js v8.0](https://nodejs.org/dist/latest-v8.x/docs/api/) - a JavaScript runtime that you can run on the server side
 * [TypeScript](https://www.typescriptlang.org) - a version of JavaScript with static types.
 * [Express](https://expressjs.com/) - a micro web framework for Node.js (and TypeScript)
+* [Knex](http://knexjs.org/) - a database connector
 * [Yarn](https://yarnpkg.com) - Node.js package and dependency management
+
+## Usage
+```
+> curl localhost:9003
+Hello from the TypeScript world!
+> curl localhost:9003/db
+Connected to the database
+```
 
 ## Local development
 ```
