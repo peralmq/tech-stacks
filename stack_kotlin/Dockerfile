@@ -10,13 +10,3 @@ CMD ["java", \
      "-XX:MaxGCPauseMillis=100", \
      "-XX:+UseStringDeduplication", \
      "-jar", "stack-kotlin.jar"]
-
-#FROM gradle:alpine
-
-#COPY ./src /src
-#COPY ./build.gradle /
-#COPY ./gradle.properties /
-#COPY ./settings.gradle /
-
-#RUN gradle wrapper
-#RUN ./gradlew build

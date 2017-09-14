@@ -6,4 +6,4 @@ app.use(morgan('dev'))
 app.all('/', (req, res) => res.send('Hello from the TypeScript world!'))
 
 const port = process.env.PORT || 3000
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port, () => console.log(`Express is up and running.`))

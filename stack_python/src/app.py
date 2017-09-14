@@ -1,9 +1,9 @@
-from flask import Flask
+from flask import Flask  # Follow https://github.com/python/typeshed/issues/28 for type stub
 app = Flask(__name__)
 
 
 @app.route('/')
-def hello():
+def hello() -> str:
     return 'Hello from the Python world!'
 
 

@@ -10,10 +10,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^8.0.28",
     "typescript": "^2.5.2"
   },
   "dependencies": {
-    "@types/node": "^8.0.28",
     "express": "^4.15.4",
     "morgan": "^1.8.2",
     "nodemon": "^1.12.0"
