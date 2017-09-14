@@ -1,0 +1,14 @@
+version: '2'
+services:
+  stack_kotlin:
+    build: stack_kotlin
+    ports:
+     - "9001:8080"
+  stack_python:
+    build: stack_python
+    ports:
+     - "9002:8080"
+  stack_typescript:
+    build: stack_typescript
+    ports:
+     - "9003:3001"

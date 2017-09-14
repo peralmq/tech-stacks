@@ -1,0 +1,21 @@
+{
+  "name": "stack_typescript",
+  "version": "1.0.0",
+  "scripts": {
+    "prestart": "tsc",
+    "start": "node src/app.js",
+    "tsc": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^2.5.2"
+  },
+  "dependencies": {
+    "@types/node": "^8.0.28",
+    "express": "^4.15.4",
+    "morgan": "^1.8.2",
+    "nodemon": "^1.12.0"
+  }
+}
