@@ -20,4 +20,8 @@ gradlew wrapper
 In order to get new source code in to the docker container the following is a needed prerequisite
 ```
 ./gradlew clean build
+
 ```
+
+## Other
+It's recommended to use an IDE like Intellij IDEA or something similar to develop Kotlin and make use of the Gradle system to the max, [details here](http://ktor.io/getting-started-idea.html)
