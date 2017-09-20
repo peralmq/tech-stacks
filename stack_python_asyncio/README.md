@@ -18,3 +18,8 @@ Connected to the database
 python3 -m pip install -r requirements.txt
 python3 src/app.py
 ```
+
+### Tests
+```
+python3 -m unittest discover -s src -p "*_tests.py"
+```
