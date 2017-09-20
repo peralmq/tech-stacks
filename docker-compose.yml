@@ -12,6 +12,10 @@ services:
     build: stack_typescript
     ports:
      - "9003:3001"
+  stack_python_asyncio:
+    build: stack_python_asyncio
+    ports:
+     - "9004:8080"
   db_mysql:
     image: mysql:5.7
     container_name: db_mysql
