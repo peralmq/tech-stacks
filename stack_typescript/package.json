@@ -2,16 +2,20 @@
   "name": "stack_typescript",
   "version": "1.0.0",
   "scripts": {
+    "clean": "rm src/**.js src/**.js.map",
     "prestart": "tsc",
+    "pretest": "tsc",
     "start": "node src/app.js",
     "tsc": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node src/**.test.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/knex": "^0.0.61",
     "@types/node": "^8.0.28",
+    "supertest": "^3.0.0",
+    "tape": "^4.8.0",
     "typescript": "^2.5.2"
   },
   "dependencies": {
