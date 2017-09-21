@@ -7,7 +7,7 @@
     "pretest": "tsc",
     "start": "node src/app.js",
     "tsc": "tsc",
-    "test": "node src/**.test.js"
+    "test": "tape src/**.test.js"
   },
   "author": "",
   "license": "ISC",

@@ -21,6 +21,12 @@ yarn install
 yarn start
 ```
 
+### Tests
+Given that you have a local mysql running with the following database mysql://services:IAmATeapot57@127.0.0.1/services
+```
+yarn test
+```
+
 ## Other
 
 ### tsc

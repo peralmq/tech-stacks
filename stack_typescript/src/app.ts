@@ -1,6 +1,6 @@
 import * as express from 'express'
 import * as morgan from 'morgan'
-import * as knex from 'knex'
+import Storage from './storage'
 
 const app: express.Application = express()
 app.use(morgan('dev'))
@@ -8,13 +8,11 @@ app.use(morgan('dev'))
 app.all(
     '/db',
     (req: express.Request, res: express.Response) => {
-        const db: knex = knex({
-            client: 'mysql',
-            connection: 'mysql://ts_user:ts_pw@db_mysql/ts_db'
+        Storage('mysql://ts_user:ts_pw@db_mysql/ts_db').status()
+        .then((ok) => {
+            if (!ok) { throw Error('Bad response from database') }
+            res.send('Connected to database')
         })
-
-        db.raw('SELECT 1')
-        .then(() => res.send('Connected to database'))
         .catch(() => res.send('Not connected to database'))
      }
  )
