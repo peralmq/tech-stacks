@@ -1,6 +1,15 @@
-FROM openjdk:8-jre-alpine
+FROM openjdk:8-jdk-alpine
+FROM gradle:jdk8-alpine
 
-COPY ./build/libs/stack-kotlin.jar /stack-kotlin.jar
+USER root
+
+COPY . /target
+WORKDIR /target
+RUN gradle build
+
+RUN addgroup appgroup && adduser -S -G appgroup appuser
+RUN chown -R appuser:appgroup .
+USER appuser
 
 CMD ["java", \
      "-server", \
@@ -9,4 +18,4 @@ CMD ["java", \
      "-XX:+UseG1GC", \
      "-XX:MaxGCPauseMillis=100", \
      "-XX:+UseStringDeduplication", \
-     "-jar", "stack-kotlin.jar"]
+     "-jar", "build/libs/stack-kotlin.jar"]
