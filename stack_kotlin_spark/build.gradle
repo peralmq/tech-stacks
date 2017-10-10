@@ -49,6 +49,7 @@ repositories {
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+    compile 'org.slf4j:slf4j-log4j12:+'
     compile "com.sparkjava:spark-core:2.6.0"
     compile "com.sparkjava:spark-kotlin:1.0.0-alpha"
     compile "com.beust:klaxon:0.30"
