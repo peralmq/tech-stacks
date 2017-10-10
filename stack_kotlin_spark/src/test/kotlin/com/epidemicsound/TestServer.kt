@@ -26,22 +26,22 @@ class TestServer {
         assertEquals("Hello from Spark Kotlin!", actual.third.get())
     }
 
-    val createTrackBody = json {
-        mapOf("url" to "https://example.com")
-    }.toString()
+    private val createTrackBody = json {
+        obj("url" to "https://example.com")
+    }.toJsonString()
 
     @Test
     fun testCreateTrack() {
         val expected = json {
-            mapOf(
-                    "url" to "https://example.com",
-                    "id" to "1"
+            obj(
+                    "id" to "1",
+                    "url" to "https://example.com"
 
             )
-        }
+        }.toJsonString()
         val actual = Fuel.post("http://localhost:4567/tracks/").body(createTrackBody).responseString()
         assertEquals(201, actual.second.statusCode)
-        assertEquals(expected.toString(), actual.third.get())
+        assertEquals(expected, actual.third.get())
     }
 
     @Test
@@ -49,15 +49,15 @@ class TestServer {
         val (_, _, responseBody) = Fuel.post("http://localhost:4567/tracks/").body(createTrackBody).responseString()
         val id = (Parser().parse(responseBody.get().byteInputStream()) as JsonObject).string("id")
         val expected = json {
-            mapOf(
-                    "url" to "https://example.com",
-                    "id" to id
+            obj(
+                    "id" to id,
+                    "url" to "https://example.com"
 
             )
-        }
+        }.toJsonString()
         val actual = Fuel.get("http://localhost:4567/tracks/" + id).body(createTrackBody).responseString()
         assertEquals(200, actual.second.statusCode)
-        assertEquals(expected.toString(), actual.third.get())
+        assertEquals(expected, actual.third.get())
     }
 }
 
