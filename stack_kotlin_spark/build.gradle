@@ -51,6 +51,7 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
     compile "com.sparkjava:spark-core:2.6.0"
     compile "com.sparkjava:spark-kotlin:1.0.0-alpha"
+    compile "com.beust:klaxon:0.30"
     compile "com.github.andrewoma.kwery:core:0.17"
     compile "mysql:mysql-connector-java:8.0.7-dmr"
     testCompile "org.jetbrains.kotlin:kotlin-test"
