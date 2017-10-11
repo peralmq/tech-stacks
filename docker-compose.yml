@@ -16,6 +16,10 @@ services:
     build: stack_python_asyncio
     ports:
      - "9004:8080"
+  stack_kotlin_spark:
+    build: stack_kotlin_spark
+    ports:
+     - "9005:4567"
   db_mysql:
     image: mysql:5.7
     container_name: db_mysql
