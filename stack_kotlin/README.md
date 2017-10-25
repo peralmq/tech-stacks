@@ -9,7 +9,7 @@ Stack based on
 ```
 brew cask install java
 brew install gradle
-gradlew wrapper
+gradle wrapper
 ```
 
 ## Local development
